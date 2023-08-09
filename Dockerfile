@@ -15,7 +15,7 @@ COPY . .
 RUN go generate
 RUN go build -o ./app ./main.go
 
-FROM alpine:latest
+FROM alpine:3.18.3
 
 RUN apk update && apk add ca-certificates && rm -rf /var/cache/apk/*
 
